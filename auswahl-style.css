@@ -1,0 +1,134 @@
+body {
+   font-family: 'Courier New', Courier, monospace;
+}
+
+#main {
+   display: flex;
+   flex-direction: column;
+   gap: 100px;
+   justify-content: center;
+   align-items: center;
+   margin: 50px
+}
+
+#f2 {
+   display: none;
+}
+
+#überschrift {
+   font-size: 75pt;
+}
+
+#auswahl {
+   font-size: 30pt;
+}
+
+#auswahl > div {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-content: center;
+   text-align: center;
+}
+
+#auswahl > div > div {
+   font-size: 0.8em;
+}
+
+button {
+   font-family: 'Courier New', Courier, monospace;
+   border: 0px;
+   background-color: white;
+   font-size: inherit;
+   width: max-content;
+   margin: auto;
+}
+
+button:hover {
+   color: red;
+}
+
+a {
+   color: black;
+   text-decoration: none;
+}
+
+a:hover {
+   color: red;
+   text-decoration: none;
+}
+
+
+#score-table {
+   width: 100%;
+   margin: 5px;
+   border-collapse: collapse;
+}
+
+#score-table th {
+   font-weight: normal;
+   text-transform: uppercase;
+}
+
+#score-table td:first-child {
+   width: 40%;
+   text-overflow: ellipsis;
+   word-wrap: break-word;
+}
+
+#score-table td:last-child {
+   color:gray;
+   font-size: 0.5em;
+   width: 40%;
+}
+
+#score-table tr {
+   border-style: solid;
+   border-width: 1px;
+   border-left: none;
+   border-right: none;
+}
+
+#score-table tr:first-child {
+   border-top: none;
+}
+
+#score-table tr:last-child {
+   border-bottom: none;
+}
+
+input[type=radio]:checked+label {
+   color: red;
+}
+
+input[type=radio]+label {
+   color: gray;
+}
+
+input[type=text] {
+   font-size: inherit;
+   font-family: inherit;
+   text-align: center;
+   margin-top: 15px;
+   border-width: 0px;
+   border-left: solid 2px rgba(255, 0, 0, 0.4);
+   border-right: solid 2px rgba(255, 0, 0, 0.4);
+}
+
+#bestenliste {
+   margin-top: 40px;
+}
+
+#submitbutton {
+   border: solid 1px darkred;
+   background-color: red;
+   box-shadow: 0px 0px 5px 1px gray;
+   border-radius: 5px;
+   color: white;
+   margin-top: 20px;
+}
+
+#submitbutton:hover {
+   background-color: rgb(240, 98, 98);
+   cursor: grab;
+}

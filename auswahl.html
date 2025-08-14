@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snake</title>
+  <link rel="stylesheet" href="auswahl-style.css">
+  <script src="auswahl-script.js" type="module" defer></script>
+
+</head>
+<body>
+    <div id="main">
+    <div id="überschrift">
+      <span>SNAKE</span>
+    </div>
+    <div id="auswahl">
+      <div id="spielen">
+        <button id="spielenButton" onclick="toggle('f1', 'spielenButton')">SPIELEN</button>
+        <div id="f1">
+          <input type="radio" id="radio-leicht" name="difficulty" value="2" hidden>
+          <label for="radio-leicht" id="radioLabel">leicht</label><br>
+          <input type="radio" id="radio-mittel" name="difficulty" value="5" hidden checked>
+          <label for="radio-mittel">mittel</label><br>
+          <input type="radio" id="radio-schwer" name="difficulty" value="10" hidden>
+          <label for="radio-schwer">schwer</label><br>
+
+          <input type="text" id="username" name="username" placeholder="enter your name"><br>
+
+          <input type="submit" id="submitbutton" value="Play!">
+        </div>
+      </div>
+
+      <div id="bestenliste">
+        <button id="listButton" onclick="toggle('f2', 'listButton')">BESTENLISTE</button>
+        <div id="f2">
+          <table id="score-table">
+            <tr>
+              <th>Name</th>
+              <th>Points</th>
+              <th>Agent</th>
+            </tr>
+          </table>
+      </div>
+      </div>
+    </div>
+
+    <script>  
+      function toggle(div, button) {
+        const my_button = document.getElementById(button);
+        const my_div = document.getElementById(div);
+  
+        if (my_div.style.display != "none") {
+          my_div.style.display = "none"
+          my_button.style.textDecoration = "none";
+        }
+        else {
+          my_div.style.display = "block"
+          my_button.style.textDecoration = "underline";
+        }
+  
+      }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "voting",
+  "version": "0.0.1",
+  "description": "This websocket server receives events and send reaction out to these events",
+  "main": "websocket.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lucas Hahn",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "ws": "^8.13.0"
+  }
+}

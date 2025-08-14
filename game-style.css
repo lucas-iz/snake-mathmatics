@@ -1,0 +1,247 @@
+:root {
+   --color-background: black;
+   --color-outer-grid-text: rgba(255,255,255,0.5);
+   --color-font: white;
+   --color-grid: white;
+   --color-grid-text: black;
+   --color-hearts: red;
+   --color-snake-body: red;
+   --color-snake-head: darkred;
+}
+
+html, body {
+   height: 100%;
+}
+
+body {
+   background-color: var(--color-background);
+   color: var(--color-font);
+   font-family: 'Courier New', Courier, monospace;
+   margin: 0px;
+
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+}
+
+#col-left,
+#col-right {
+   position: relative;
+   height: 100%;
+   width: 100%;
+}
+
+#col-right {
+   display: flex;
+   flex-direction: column;
+   justify-content: end;
+}
+
+#main {
+   width: 900px;
+   height: 900px;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   align-self: center;
+}
+
+#grid {
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: row;
+}
+
+#grid div {
+   color: var(--color-grid-text);
+}
+
+/****** AROUND GRID ******/
+
+#equation {
+   position: absolute;
+   top: 20px;
+   left: 40px;
+   font-size: 100px;
+   font-weight: bolder;
+   color: var(--color-outer-grid-text);
+   min-width: 150px;
+   word-wrap: break-word;
+   text-align: center;
+}
+
+#pointsWrapper {
+   position: absolute;
+   top: 5px;
+   left: 40px;
+   font-size: 18pt;
+}
+
+#lives {
+   position: absolute;
+   top: 1px;
+   right: 40px;
+   font-size: 25pt;
+   color: var(--color-hearts);
+}
+
+#speedWrapper {
+   position: absolute;
+   bottom: 5px;
+   right: 40px;
+   font-size: 18pt;
+}
+
+#username {
+   position: absolute;
+   bottom: 5px;
+   left: 40px;
+   font-size: 18pt;
+}
+
+#level {
+   width: 100%;
+   text-align: center;
+   font-size: 200px;
+   color: var(--color-outer-grid-text);
+
+}
+
+#button_pause {
+   position: fixed;
+   bottom: 50px;
+   left: 50px;
+
+   cursor: grab;
+   border-radius: 20px;
+}
+
+
+/****** Pop-Ups ******/
+
+.popup {
+   display: none;
+   width: 100%;
+   height: 100%;
+   z-index: 1;
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   overflow: auto;
+   background-color: black;
+   background-color: rgba(0,0,0,0.4);
+}
+
+#popup-wrongAnswer {
+   background-color: rgba(255,0,0,0.4);
+}
+
+.popup-content {
+   background-color: var(--color-grid);
+   color: var(--color-background);
+   margin: 10% auto;
+   padding: 20px;
+   border: 1px solid #888;
+   width: 40%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   font-size: 30pt;
+   font-weight: bold;
+   text-align: center;
+   margin-bottom: 20px;
+}
+
+.close {
+   margin-top: 30px;
+   font-size: 20pt;
+   color: red;
+}
+
+.close:hover,
+.close:focus {
+   color: black;
+   text-decoration: none;
+   cursor: pointer;
+}
+
+.popup-info {
+   width: 60%;
+   min-height: 80px;
+   font-size: 20pt;
+   font-weight: normal;
+}
+
+/****** Pixels ******/
+
+.grid_pixels {
+   background-color: var(--color-grid);
+   color: var(--color-font);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-weight: bolder;
+}
+
+.active {
+   background-color: var(--color-snake-body) !important;
+   /* background-image: url("resources/snake-body.png");
+   background-size: 100% 100%; */
+}
+
+.head {
+   background-color: var(--color-snake-head);
+   /* background-image: url("resources/snake-head.png");
+   background-size: 100% 100%; */
+}
+
+.tail {
+   background-color: var(--color-snake-body);
+   /* background-image: url("resources/snake-tail.png");
+   background-size: 100% 100%;
+   transform: rotate(180deg); */
+}
+
+.preview {
+   background-color: rgb(255, 187, 153);
+   box-sizing: border-box;
+   border-color: var(--color-snake-body);
+   border-style: dashed;
+   border-width: 2px;
+   
+}
+
+/****** Bestenliste ******/
+
+#scores {
+   width: auto;
+}
+
+#score-table {
+   width: 100%;
+   border-collapse: collapse;
+}
+
+#score-table th,td {
+   text-align: center;
+}
+
+#score-table tr {
+   border-style: solid;
+   border-width: 1px;
+   border-left: none;
+   border-right: none;
+   border-color: black;
+}
+
+#score-table tr:first-child {
+   border-top: none;
+}
+
+#score-table tr:last-child {
+   border-bottom: none;
+}

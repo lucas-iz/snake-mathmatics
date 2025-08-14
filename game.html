@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Snake</title>
+   <link rel="stylesheet" href="game-style.css">
+   <!-- <script src="connect.js" type="module" defer></script> -->
+   <script src="game-script.js" type="module" defer></script>
+</head>
+<body>
+   <div id="col-left">
+      <div id="equation"></div>
+   </div>
+   <div id="col-middle">
+      <div id="main">
+         <div id="grid"></div>
+         <div id="pointsWrapper"><span id="points"></span> Punkte</div>
+         <div id="lives"></div>
+         <div id="username"></div>
+         <div id="speedWrapper"><span id="speed"></span> px/sec</div>
+      </div>
+   </div>
+   <div id="col-right">
+      <div id="level"></div>
+   </div>
+   
+   <div id="button_pause" style="display: none;">Start</div> 
+   
+   <div id="popup-gameover" class="popup">
+      <div class="popup-content">
+         <p>GAME OVER!</p>
+         <div id="scores" class="popup-info">
+            <table id="score-table">
+               <tr>
+                  <th>Name</th>
+                  <th>Points</th>
+                  <th>Agent</th>
+               </tr>
+            </table>
+         </div>
+         <div id="button-wrapper">
+            <span id="button-home" class="close">auswahl</span>
+            <span id="button-restart" class="close">nochmal</span>
+         </div>
+      </div>
+   </div>
+   <div id="popup-wrongAnswer" class="popup"></div>
+</body>
+</html>
